@@ -9,22 +9,22 @@ import { FooterComponent } from './footer/footer.component';
 import { RouterModule, Routes } from '@angular/router';//Imported for routing
 
 import { TestComponent } from './test/test.component';
-import { HomeComponent } from './home/home.component'; 
+import { HomeComponent } from './home/home.component';
+import { RoutingModule } from './routing/routing.module';
 
 
-const appRoutes: Routes = [
+/*const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'header', component: HeaderComponent },
   { path: 'test',   component: TestComponent },
   { path: 'home',   component: HomeComponent },
-];
+];*/
 
 
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ,  RouterModule.forRoot(
-      appRoutes)],
+  imports:      [ BrowserModule, FormsModule , RoutingModule],
   declarations: [ AppComponent, HeaderComponent, FooterComponent, TestComponent, HomeComponent ],
   bootstrap:    [ AppComponent ]
 })
