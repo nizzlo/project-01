@@ -7,6 +7,8 @@ import { HelloComponent } from './hello.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
+import { RouterModule, Routes } from '@angular/router'; //Imported for routing
+
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
   declarations: [ AppComponent, HeaderComponent, FooterComponent ],
