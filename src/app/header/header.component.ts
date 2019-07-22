@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  details=[{id:"Home"},{id:"Profile"},{id:"Feedback"}]
+  details=[{id:"home"},{id:"profile"},{id:"feedback"}]
   
   constructor() { }
 

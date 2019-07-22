@@ -3,15 +3,29 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
-import { RouterModule, Routes } from '@angular/router'; //Imported for routing
+import { RouterModule, Routes } from '@angular/router';//Imported for routing
+
+import { TestComponent } from './test/test.component';
+import { HomeComponent } from './home/home.component'; 
+
+
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'header', component: HeaderComponent },
+  { path: 'test',   component: TestComponent },
+  { path: 'home',   component: HomeComponent },
+];
+
+
+
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HeaderComponent, FooterComponent ],
+  imports:      [ BrowserModule, FormsModule ,  RouterModule.forRoot(
+      appRoutes)],
+  declarations: [ AppComponent, HeaderComponent, FooterComponent, TestComponent, HomeComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
